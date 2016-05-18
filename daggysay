@@ -1,0 +1,27 @@
+#!/bin/bash
+
+if [ -n "$1" ] ; then
+	message="$1"
+else
+	message='You need to give me something to say e.g.  daggysay "Forecast: Cloudy with a chance of buzzwords."'
+fi
+
+echo
+echo 'Daggy says...'
+echo
+echo '/-----------------------------------------------------------------------------\'
+echo "$message" | tr '\t' '    ' | fold -w76 -s | awk '{printf "%-76s\n", $0}' | sed -e 's/^/| /' | sed -e 's/$/|/'
+echo '\------   --------------------------------------------------------------------/'
+echo '       \ /'
+echo '        \|'
+echo '            __>  __>'
+echo '            ___  ___'
+echo '           /   \/   \'
+echo '    _      |  @||  @|'
+echo '     |-----\   /\   /------'
+echo '    ----    ---  ---     e |'
+echo '    ---- ========________  |'
+echo '     |   ======= \       \ |'
+echo '     |___________ |  -v- /_|'
+echo '     | |||||||||||/_|___/|'
+echo
